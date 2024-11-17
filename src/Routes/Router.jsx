@@ -11,7 +11,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("topBrand.json"),
+        loader: async () => {
+          const topBrandsResponse = await fetch("topBrand.json");
+          const topBrands = await topBrandsResponse.json();
+          const brandsOnSaleResponse = await fetch("coupons.json");
+          const brands = await brandsOnSaleResponse.json();
+
+          return { topBrands, brands };
+        },
       },
       {
         path: "/brands",

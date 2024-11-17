@@ -7,13 +7,13 @@ const BrandsOnSale = ({ data: brands }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {saleBrands.map((brand) => (
           <div
-            key={brand.id}
+            key={brand._id}
             className="border p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
           >
             <img
-              src={brand.logo}
+              src={brand.brand_logo}
               alt={brand.name}
-              className="w-20 h-20 object-cover mx-auto mb-3"
+              className="w-20 h-20  mx-auto mb-3"
             />
             <h4 className="text-center font-semibold">{brand.name}</h4>
             <p className="text-center text-sm text-gray-600">
