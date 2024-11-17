@@ -1,0 +1,42 @@
+[
+  {
+    "id": "001",
+    "name": "Amazon",
+    "logo": "https://i.ibb.co/X268sy2/amazon-logo-amazon-icon-free-free-vector.jpg"
+  },
+  {
+    "id": "002",
+    "name": "Daraz",
+    "logo": "https://i.ibb.co/YjTyzW1/daraz.png"
+  },
+  {
+    "id": "003",
+    "name": "Foodpanda",
+    "logo": "https://i.ibb.co/7K7TKCX/foodpand.png"
+  },
+  {
+    "id": "004",
+    "name": "Uber Eats",
+    "logo": "https://i.ibb.co/Rpx7gmG/uber-eat.png"
+  },
+  {
+    "id": "005",
+    "name": "AliExpress",
+    "logo": "https://i.ibb.co/zXjv92Z/aliexpress.jpg"
+  },
+  {
+    "id": "006",
+    "name": "Shein",
+    "logo": "https://i.ibb.co/t4XbcXS/shien.png"
+  },
+  {
+    "id": "007",
+    "name": "Zalando",
+    "logo": "https://i.ibb.co/12CTs75/zalando.png"
+  },
+  {
+    "id": "008",
+    "name": "Flipkart",
+    "logo": "https://i.ibb.co/3m7x6dM/flipkart.png"
+  }]
+ 
