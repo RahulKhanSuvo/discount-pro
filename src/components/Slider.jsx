@@ -4,21 +4,44 @@ import slideOne from "../assets/241113-acr-883-macys-crsl-dt_.jpg";
 import slideTwos from "../assets/241018-acr-574-temu-crsl-dt.jpg";
 import slideThree from "../assets/241108-acr-880-walmart-crsl-dt.jpg";
 import slideFour from "../assets/241116-holiday-savings-3x-hpcarousel-large-baked-2304x608@2x.jpg";
+
 const Slider = () => {
   return (
     <div>
-      <Carousel showThumbs={false}>
+      <Carousel
+        showThumbs={false}
+        autoPlay={true}
+        interval={3000}
+        infiniteLoop={true}
+        transitionTime={500}
+      >
         <div>
-          <img className="" src={slideOne} alt="Slide 1" />
+          <img
+            src={slideOne}
+            alt="Slide 1"
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          />
         </div>
         <div>
-          <img src={slideTwos} alt="Slide 1" />
+          <img
+            src={slideTwos}
+            alt="Slide 2"
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          />
         </div>
         <div>
-          <img src={slideThree} alt="Slide 1" />
+          <img
+            src={slideThree}
+            alt="Slide 3"
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          />
         </div>
         <div>
-          <img className="" src={slideFour} alt="Slide 1" />
+          <img
+            src={slideFour}
+            alt="Slide 4"
+            style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          />
         </div>
       </Carousel>
     </div>
