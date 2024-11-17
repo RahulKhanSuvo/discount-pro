@@ -4,18 +4,13 @@
     "brand_name": "Amazon",
     "rating": 4.8,
     "description": "Online shopping platform offering a wide range of products.",
-    "brand_logo": "https://i.ibb.co.com/X268sy2/amazon-logo-amazon-icon-free-free-vector.jpg",
+    "brand_logo": "https://i.ibb.co/X268sy2/amazon-logo-amazon-icon-free-free-vector.jpg",
     "shop_Link": "https://www.amazon.com",
     "category": "E-commerce",
     "isSaleOn": true,
     "coupons": [
-      {
-        "coupon_code": "SAVE20",
-        "description": "Get 20% off on electronics.",
-        "expiry_date": "2024-12-31",
-        "condition": "Min purchase $100.",
-        "coupon_type": "Percentage Discount"
-      }
+      { "coupon_code": "SAVE20", "description": "20% off on electronics.", "expiry_date": "2024-12-31" },
+      { "coupon_code": "FREESHIP", "description": "Free shipping on orders $50+.", "expiry_date": "2024-11-30" }
     ]
   },
   {
@@ -23,37 +18,27 @@
     "brand_name": "Daraz",
     "rating": 4.6,
     "description": "Leading e-commerce platform in South Asia.",
-    "brand_logo": "https://i.ibb.co.com/YjTyzW1/daraz.png",
+    "brand_logo": "https://i.ibb.co/YjTyzW1/daraz.png",
     "shop_Link": "https://www.daraz.com.bd",
     "category": "E-commerce",
     "isSaleOn": true,
     "coupons": [
-      {
-        "coupon_code": "DARAZ10",
-        "description": "10% off during the Daraz Sale.",
-        "expiry_date": "2024-12-15",
-        "condition": "Max discount $20.",
-        "coupon_type": "Flat Discount"
-      }
+      { "coupon_code": "DARAZ10", "description": "10% off during the sale.", "expiry_date": "2024-12-15" },
+      { "coupon_code": "FLASH5", "description": "Extra 5% off all products.", "expiry_date": "2024-11-20" }
     ]
   },
   {
     "_id": "003",
     "brand_name": "Foodpanda",
     "rating": 4.4,
-    "description": "Food delivery service with exclusive deals.",
-    "brand_logo": "https://i.ibb.co.com/7K7TKCX/foodpand.png",
+    "description": "Food delivery with exclusive deals.",
+    "brand_logo": "https://i.ibb.co/7K7TKCX/foodpand.png",
     "shop_Link": "https://www.foodpanda.com",
     "category": "Food & Delivery",
     "isSaleOn": false,
     "coupons": [
-      {
-        "coupon_code": "PANDA15",
-        "description": "15% off first order.",
-        "expiry_date": "2025-01-01",
-        "condition": "New users only.",
-        "coupon_type": "New User Discount"
-      }
+      { "coupon_code": "PANDA15", "description": "15% off first order.", "expiry_date": "2025-01-01" },
+      { "coupon_code": "WEEKEND50", "description": "50% off weekend orders.", "expiry_date": "2024-12-31" }
     ]
   },
   {
@@ -61,132 +46,97 @@
     "brand_name": "Uber Eats",
     "rating": 4.7,
     "description": "Food delivery from local restaurants.",
-    "brand_logo": "https://i.ibb.co.com/Rpx7gmG/uber-eat.png",
+    "brand_logo": "https://i.ibb.co/Rpx7gmG/uber-eat.png",
     "shop_Link": "https://www.ubereats.com",
     "category": "Food & Delivery",
     "isSaleOn": true,
     "coupons": [
-      {
-        "coupon_code": "EATS50",
-        "description": "50% off on first three orders.",
-        "expiry_date": "2024-12-31",
-        "condition": "Max $15 per order.",
-        "coupon_type": "New User Discount"
-      }
+      { "coupon_code": "EATS50", "description": "50% off first three orders.", "expiry_date": "2024-12-31" },
+      { "coupon_code": "BUNDLE5", "description": "$5 off multi-restaurant orders.", "expiry_date": "2024-11-30" }
     ]
   },
   {
     "_id": "005",
     "brand_name": "AliExpress",
     "rating": 4.5,
-    "description": "Affordable products with global shipping.",
-    "brand_logo": "https://example.com/logos/aliexpress.png",
+    "description": "Affordable global products.",
+    "brand_logo": "https://i.ibb.co/zXjv92Z/aliexpress.jpg",
     "shop_Link": "https://www.aliexpress.com",
     "category": "E-commerce",
     "isSaleOn": false,
     "coupons": [
-      {
-        "coupon_code": "EXPRESS10",
-        "description": "10% off orders above $50.",
-        "expiry_date": "2024-12-15",
-        "condition": "Selected items only.",
-        "coupon_type": "Percentage Discount"
-      }
+      { "coupon_code": "EXPRESS10", "description": "10% off $50+ orders.", "expiry_date": "2024-12-15" },
+      { "coupon_code": "SHIPFREE", "description": "Free international shipping.", "expiry_date": "2025-01-10" }
     ]
   },
   {
     "_id": "006",
     "brand_name": "Shein",
     "rating": 4.3,
-    "description": "Trendy and affordable fashion.",
-    "brand_logo": "https://example.com/logos/shein.png",
+    "description": "Trendy, affordable fashion.",
+    "brand_logo": "https://i.ibb.co/t4XbcXS/shien.png",
     "shop_Link": "https://www.shein.com",
     "category": "Fashion",
     "isSaleOn": true,
     "coupons": [
-      {
-        "coupon_code": "SHEIN15",
-        "description": "15% off on all items.",
-        "expiry_date": "2024-11-25",
-        "condition": "No min purchase.",
-        "coupon_type": "Percentage Discount"
-      }
+      { "coupon_code": "SHEIN15", "description": "15% off all items.", "expiry_date": "2024-11-25" },
+      { "coupon_code": "FREERETURN", "description": "Free returns on all orders.", "expiry_date": "2024-12-10" }
     ]
   },
   {
     "_id": "007",
     "brand_name": "Zalando",
     "rating": 4.2,
-    "description": "European fashion with a variety of brands.",
-    "brand_logo": "https://example.com/logos/zalando.png",
+    "description": "European fashion retailer.",
+    "brand_logo": "https://i.ibb.co/12CTs75/zalando.png",
     "shop_Link": "https://www.zalando.com",
     "category": "Fashion",
     "isSaleOn": false,
     "coupons": [
-      {
-        "coupon_code": "WELCOME20",
-        "description": "20% off first order.",
-        "expiry_date": "2024-12-31",
-        "condition": "New users only.",
-        "coupon_type": "New User Discount"
-      }
+      { "coupon_code": "WELCOME20", "description": "20% off first order.", "expiry_date": "2024-12-31" },
+      { "coupon_code": "FREEDEL", "description": "Free delivery on $75+ orders.", "expiry_date": "2024-11-30" }
     ]
   },
   {
     "_id": "008",
     "brand_name": "Flipkart",
     "rating": 4.5,
-    "description": "One of India's leading online shopping platforms.",
-    "brand_logo": "https://example.com/logos/flipkart.png",
+    "description": "India's leading online shopping platform.",
+    "brand_logo": "https://i.ibb.co/3m7x6dM/flipkart.png",
     "shop_Link": "https://www.flipkart.com",
     "category": "E-commerce",
     "isSaleOn": true,
     "coupons": [
-      {
-        "coupon_code": "FLIP10",
-        "description": "Flat 10% off on electronics.",
-        "expiry_date": "2025-01-10",
-        "condition": "Min purchase $150.",
-        "coupon_type": "Flat Discount"
-      }
+      { "coupon_code": "FLIP10", "description": "Flat 10% off electronics.", "expiry_date": "2025-01-10" },
+      { "coupon_code": "DEAL20", "description": "20% off fashion items.", "expiry_date": "2024-11-30" }
     ]
   },
   {
     "_id": "009",
     "brand_name": "Shopify",
     "rating": 4.6,
-    "description": "Leading platform for online store creation.",
-    "brand_logo": "https://example.com/logos/shopify.png",
+    "description": "Platform for online stores.",
+    "brand_logo": "https://i.ibb.co/nzRZvzP/shopify.png",
     "shop_Link": "https://www.shopify.com",
     "category": "Software",
     "isSaleOn": false,
     "coupons": [
-      {
-        "coupon_code": "TRIAL30",
-        "description": "Get a 30-day free trial.",
-        "expiry_date": "2025-06-30",
-        "condition": "New users only.",
-        "coupon_type": "Free Trial"
-      }
+      { "coupon_code": "TRIAL30", "description": "30-day free trial.", "expiry_date": "2025-06-30" },
+      { "coupon_code": "SAVE15", "description": "15% off subscription fees.", "expiry_date": "2024-12-31" }
     ]
   },
   {
     "_id": "010",
     "brand_name": "Walmart",
     "rating": 4.7,
-    "description": "Retail giant offering a wide range of products.",
-    "brand_logo": "https://example.com/logos/walmart.png",
+    "description": "Retail giant with wide product range.",
+    "brand_logo": "https://i.ibb.co/M1VMbXK/walmart.png",
     "shop_Link": "https://www.walmart.com",
     "category": "Retail",
     "isSaleOn": true,
     "coupons": [
-      {
-        "coupon_code": "WALMARTSAVE",
-        "description": "Save 10% on groceries.",
-        "expiry_date": "2024-12-31",
-        "condition": "Min purchase $50.",
-        "coupon_type": "Percentage Discount"
-      }
+      { "coupon_code": "WALMARTSAVE", "description": "Save 10% on groceries.", "expiry_date": "2024-12-31" },
+      { "coupon_code": "FREESAMPLE", "description": "Free samples with orders.", "expiry_date": "2025-01-15" }
     ]
   }
 ]
