@@ -5,6 +5,7 @@ import Brands from "../pages/Brands";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import CouponPage from "../pages/CouponPage";
+import PrivateRoute from "../Private/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/brands/:id",
-    element: <CouponPage></CouponPage>,
+    element: (
+      <PrivateRoute>
+        <CouponPage></CouponPage>
+      </PrivateRoute>
+    ),
     loader: async ({ params }) => {
       const res = await fetch("/coupons.json");
       const data = await res.json();

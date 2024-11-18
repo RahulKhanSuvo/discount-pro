@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../context/authContext";
 
 const Login = () => {
   const { userLogin, userGoogleSignIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
   const handelSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -12,6 +14,16 @@ const Login = () => {
     userLogin(email, password)
       .then((result) => {
         console.log(result.user);
+        navigate(location.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const handelGoogleLogin = () => {
+    userGoogleSignIn()
+      .then(() => {
+        navigate(location.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error);
@@ -68,7 +80,7 @@ const Login = () => {
         </form>
         <div>
           <button
-            onClick={userGoogleSignIn}
+            onClick={handelGoogleLogin}
             className="flex items-center justify-center w-full  border border-gray-300 rounded-full px-4 py-2 shadow-sm bg-white hover:bg-gray-100"
           >
             <FcGoogle className="mr-2" />
