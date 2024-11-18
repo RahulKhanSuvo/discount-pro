@@ -6,11 +6,14 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import CouponPage from "../pages/CouponPage";
 import PrivateRoute from "../Private/PrivateRoute";
+import ProfilePage from "../pages/ProfilePage";
+import ErrorPage from "../components/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -28,6 +31,14 @@ const router = createBrowserRouter([
         path: "/brands",
         element: <Brands></Brands>,
         loader: () => fetch("/coupons.json"),
+      },
+      {
+        path: "/myProfile",
+        element: (
+          <PrivateRoute>
+            <ProfilePage></ProfilePage>
+          </PrivateRoute>
+        ),
       },
     ],
   },
@@ -52,10 +63,6 @@ const router = createBrowserRouter([
       const singleData = data.find((d) => d._id == params.id);
       return singleData;
     },
-  },
-  {
-    path: "*",
-    element: <p>error</p>,
   },
 ]);
 export default router;

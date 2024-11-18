@@ -31,14 +31,16 @@ const Header = () => {
           >
             Brands
           </NavLink>
-          <NavLink
-            to="/myProfile"
-            className={({ isActive }) =>
-              isActive ? "text-[#8529CD] font-bold underline" : ""
-            }
-          >
-            My Profile
-          </NavLink>
+          {user && (
+            <NavLink
+              to="/myProfile"
+              className={({ isActive }) =>
+                isActive ? "text-[#8529CD] font-bold underline" : ""
+              }
+            >
+              My Profile
+            </NavLink>
+          )}
           <NavLink
             to="/about"
             className={({ isActive }) =>

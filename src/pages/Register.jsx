@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../context/authContext";
 
 const Register = () => {
   const { userRegister, updateUserProfile, userGoogleSignIn } =
     useContext(AuthContext);
+  const navigate = useNavigate();
   const handelSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -14,6 +15,7 @@ const Register = () => {
     const photo = e.target.photo.value;
     userRegister(email, password)
       .then((result) => {
+        navigate("/");
         console.log(result.user);
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
