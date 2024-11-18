@@ -1,12 +1,21 @@
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import AuthContext from "../context/authContext";
 
 const Login = () => {
+  const { userLogin } = useContext(AuthContext);
   const handelSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    userLogin(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
