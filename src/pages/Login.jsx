@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AuthContext from "../context/authContext";
 
 const Login = () => {
-  const { userLogin } = useContext(AuthContext);
+  const { userLogin, userGoogleSignIn } = useContext(AuthContext);
   const handelSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -67,7 +67,10 @@ const Login = () => {
           <div className="divider">OR</div>
         </form>
         <div>
-          <button className="flex items-center justify-center w-full  border border-gray-300 rounded-full px-4 py-2 shadow-sm bg-white hover:bg-gray-100">
+          <button
+            onClick={userGoogleSignIn}
+            className="flex items-center justify-center w-full  border border-gray-300 rounded-full px-4 py-2 shadow-sm bg-white hover:bg-gray-100"
+          >
             <FcGoogle className="mr-2" />
             <span className="text-gray-600 font-medium">Login with Google</span>
           </button>

@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import AuthContext from "../context/authContext";
 
 const Register = () => {
-  const { userRegister, updateUserProfile } = useContext(AuthContext);
+  const { userRegister, updateUserProfile, userGoogleSignIn } =
+    useContext(AuthContext);
   const handelSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -94,7 +95,7 @@ const Register = () => {
         </form>
         <div>
           <button className="flex items-center justify-center w-full  border border-gray-300 rounded-full px-4 py-2 shadow-sm bg-white hover:bg-gray-100">
-            <FcGoogle className="mr-2" />
+            <FcGoogle onClick={userGoogleSignIn} className="mr-2" />
             <span className="text-gray-600 font-medium">Login with Google</span>
           </button>
         </div>
