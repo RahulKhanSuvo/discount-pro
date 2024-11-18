@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useContext } from "react";
 import AuthContext from "../context/authContext";
+import Footer from "../components/Footer";
 const MainLayout = () => {
   const { user } = useContext(AuthContext);
   return (
@@ -18,6 +19,7 @@ const MainLayout = () => {
         )}
         <Header></Header>
         <Outlet></Outlet>
+        <Footer></Footer>
         <ToastContainer />
       </div>
     </div>

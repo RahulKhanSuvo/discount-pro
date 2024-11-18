@@ -14,7 +14,7 @@ const TopBrand = ({ data: brands }) => {
         >
           {brands.map((brand) => (
             <div key={brand.id} className=" py-2 px-5 cursor-pointer">
-              <Link to={`/brand/${brand.id}`}>
+              <Link to={`/brands`}>
                 <img
                   src={brand.logo}
                   alt={brand.name}

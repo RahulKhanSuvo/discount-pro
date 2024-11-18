@@ -16,14 +16,14 @@ const BrandCard = ({ brand }) => {
 
   return (
     <div className="flex relative justify-between shadow-md  items-center  rounded-3xl p-6">
-      <div>
+      <div className="border rounded-lg">
         <img
-          className=" size-20 rounded-3xl"
+          className=" w-32 p-3 border-b rounded-t-lg"
           src={brand_logo}
           alt={brand_name}
         />
-        <div className="ml-3">
-          <h3 className="text-lg font-semibold">{brand_name}</h3>
+        <div className="ml-3 ">
+          <h3 className="text-lg border-b font-semibold">{brand_name}</h3>
           <ReactStars
             isHalf={true}
             count={5}

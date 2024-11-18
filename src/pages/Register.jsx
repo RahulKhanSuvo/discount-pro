@@ -5,7 +5,7 @@ import AuthContext from "../context/authContext";
 import { toast } from "react-toastify";
 
 const Register = () => {
-  const { userRegister, updateUserProfile, userGoogleSignIn } =
+  const { userRegister, updateUserProfile, userGoogleSignIn, setLoading } =
     useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -48,6 +48,7 @@ const Register = () => {
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
             console.log("User profile updated successfully");
+            setLoading(false);
             navigate("/");
           })
           .catch((error) => {

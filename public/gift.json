@@ -1,0 +1,46 @@
+[
+  {
+    "brand": "Skechers",
+    "cashBack": "9% Cash Back",
+    "previousCashBack": "3%",
+    "buttonText": "Shop",
+    "logoImg": "https://i.ibb.co.com/9hS4cDj/9703-skechers-square-fullcolor-100324.png",
+    "backgroundImg": "https://i.ibb.co.com/m9cjdPB/hgg-skechers1729721964832.jpg"
+  },
+  {
+    "brand": "Columbia Sportswear",
+    "cashBack": "2% Cash Back",
+    "buttonText": "Shop",
+    "logoImg": "https://i.ibb.co.com/KV0cfMB/10437-Columbia-Sportswear-square-fullcolor-result.png",
+    "backgroundImg": "https://i.ibb.co.com/BsQYk7Z/hgg-columbiasportswear1729632830592.jpg"
+  },
+  {
+    "brand": "BIRKENSTOCK",
+    "cashBack": "6% Cash Back",
+    "previousCashBack": "2%",
+    "buttonText": "Shop",
+    "logoImg": "https://i.ibb.co.com/ZmHJ4nn/merchantname-square-fullcolor.png",
+    "backgroundImg": "https://i.ibb.co.com/8BPzMR5/hgg-birkenstock1729283589355.jpg"
+  },
+  {
+    "brand": "FOSSIL",
+    "cashBack": "3% Cash Back",
+    "buttonText": "Shop",
+    "logoImg": "https://i.ibb.co.com/qRtzhy7/6226-FOSSIL-square-fullcolor.png",
+    "backgroundImg": "https://i.ibb.co.com/rcqGD0T/hgg-fossil1731021766900.jpg"
+  },
+  {
+    "brand": "Macy's",
+    "cashBack": "2% Cash Back",
+    "buttonText": "Shop",
+    "logoImg": "https://i.ibb.co.com/JHF4rK4/8333-Macys-square-fullcolor.png",
+    "backgroundImg": "https://i.ibb.co.com/RN6s0tQ/macys-1200x628-082624-1.jpg"
+  },
+  {
+    "brand": "Sam's Club",
+    "cashBack": "Up to 4% Cash Back",
+    "buttonText": "Shop",
+    "logoImg": "https://i.ibb.co.com/6rgXCjd/10086-sc-square-fullcolor.png",
+    "backgroundImg": "https://i.ibb.co.com/W3d1pfC/samsclub-1200x628-112822-2.jpg"
+  }
+]

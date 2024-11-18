@@ -8,11 +8,7 @@ const BrandsOnSale = ({ data: brands }) => {
         {saleBrands.map((brand) => (
           <div className=" border px-6 rounded-md" key={brand._id}>
             <div className="flex justify-center items-center">
-              <img
-                className="rounded-full mb-3  h-28 p-4"
-                src={brand.brand_logo}
-                alt=""
-              />
+              <img className=" mb-3  h-28 p-4" src={brand.brand_logo} alt="" />
             </div>
             <div className="border-t ">
               <div className="flex justify-between mt-4">
