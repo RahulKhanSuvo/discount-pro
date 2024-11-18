@@ -6,7 +6,6 @@ import HolidayToy from "./HolidayToy";
 
 const Home = () => {
   const { topBrands, brands } = useLoaderData();
-  console.log(topBrands);
   return (
     <div className="container mx-auto">
       <Slider></Slider>

@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import AuthContext from "../context/authContext";
 
 const Header = () => {
+  const { name } = useContext(AuthContext);
   return (
     <div className="border-b bg-white z-50 sticky top-0 shadow-sm">
       <nav className="flex container mx-auto py-4 justify-between items-center">
@@ -48,7 +51,7 @@ const Header = () => {
         <div>
           <Link
             to={"/login"}
-            className="text-lg font-semibold text-[#8529CD] hover:underline"
+            className="text-lg font-semibold text-white px-5 py-2 rounded-full bg-[#8529CD] hover:underline"
           >
             Login
           </Link>
