@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { FaHome, FaTags, FaUser, FaInfoCircle } from "react-icons/fa";
 import AuthContext from "../context/authContext";
 
 const Header = () => {
   const { user, userLogout } = useContext(AuthContext);
-  console.log(user);
+
   return (
     <div className="border-b bg-white z-50 sticky top-0 shadow-sm">
       <nav className="flex container mx-auto py-4 justify-between items-center">
@@ -13,41 +14,56 @@ const Header = () => {
           <h1 className="font-bold text-2xl text-[#8529CD]">DISCOUNT PRO</h1>
         </Link>
 
-        {/* Navigation Links */}
-        <div className="flex gap-5">
+        {/* Centered Navigation Links with Icons */}
+        <div className="flex gap-8">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "text-[#8529CD] font-bold underline" : ""
+              `flex flex-col items-center ${
+                isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
+              }`
             }
           >
-            Home
+            <FaHome size={20} />
+            <span className="text-sm">Home</span>
           </NavLink>
+
           <NavLink
             to="/brands"
             className={({ isActive }) =>
-              isActive ? "text-[#8529CD] font-bold underline" : ""
+              `flex flex-col items-center ${
+                isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
+              }`
             }
           >
-            Brands
+            <FaTags size={20} />
+            <span className="text-sm">Brands</span>
           </NavLink>
+
           {user && (
             <NavLink
               to="/myProfile"
               className={({ isActive }) =>
-                isActive ? "text-[#8529CD] font-bold underline" : ""
+                `flex flex-col items-center ${
+                  isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
+                }`
               }
             >
-              My Profile
+              <FaUser size={20} />
+              <span className="text-sm">My Profile</span>
             </NavLink>
           )}
+
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? "text-[#8529CD] font-bold underline" : ""
+              `flex flex-col items-center ${
+                isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
+              }`
             }
           >
-            About Dev
+            <FaInfoCircle size={20} />
+            <span className="text-sm">About Dev</span>
           </NavLink>
         </div>
 

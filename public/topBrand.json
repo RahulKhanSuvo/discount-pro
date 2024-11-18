@@ -2,41 +2,62 @@
   {
     "id": "001",
     "name": "Amazon",
-    "logo": "https://i.ibb.co.com/5rtvfSB/Amazon-2000-2.png"
+    "logo": "https://i.ibb.co.com/Phy9vSf/amazon-logo-png.webp"
   },
   {
     "id": "002",
     "name": "Daraz",
-    "logo": "https://i.ibb.co/YjTyzW1/daraz.png"
+    "logo": "https://i.ibb.co.com/WzGGqKW/Daraz-Logo.png"
   },
   {
     "id": "003",
     "name": "Foodpanda",
-    "logo": "https://i.ibb.co/7K7TKCX/foodpand.png"
+    "logo": "https://i.ibb.co.com/z7vcy0x/Foodpanda-Logo-wine.png"
   },
   {
     "id": "004",
     "name": "Uber Eats",
-    "logo": "https://i.ibb.co/Rpx7gmG/uber-eat.png"
+    "logo": "https://i.ibb.co.com/jHhL5MB/Uber-Eats-Logo.png"
   },
   {
     "id": "005",
     "name": "AliExpress",
-    "logo": "https://i.ibb.co.com/jMXvj4j/ali-express.jpg"
+    "logo": "https://i.ibb.co.com/M50BXRw/Ali-Express-Logo-wine.png"
   },
   {
     "id": "006",
     "name": "Shein",
-    "logo": "https://i.ibb.co/t4XbcXS/shien.png"
+    "logo": "https://i.ibb.co.com/HXXpLv6/Shein-Logo.png"
   },
   {
     "id": "007",
     "name": "Zalando",
-    "logo": "https://i.ibb.co/12CTs75/zalando.png"
+    "logo": "https://i.ibb.co.com/RjyyszX/zalando-logo-0.png"
   },
   {
     "id": "008",
     "name": "Flipkart",
-    "logo": "https://i.ibb.co.com/DC1JNXn/flipcard.png"
-  }]
+    "logo": "https://i.ibb.co.com/jGwq2H4/Flipkart-Logo-wine.png"
+  },
+  {
+    "id": "009",
+    "name": "Shopify",
+    "logo": "https://i.ibb.co.com/n8JkQmK/Shopify-Logo.png"
+  },
+  {
+    "id": "010",
+    "name": "Walmart",
+    "logo": "https://i.ibb.co.com/wyK3bkL/Walmart-Logo-wine.png"
+  },
+  {
+    "id": "012",
+    "name": "BestBuy",
+    "logo": "https://i.ibb.co.com/4N23kxZ/download-2.png"
+  },
+  {
+    "id": "013",
+    "name": "Target",
+    "logo": "https://i.ibb.co.com/0mds23w/target-logo-target-icon-transparent-free-png.webp"
+  }
+]
  

@@ -24,7 +24,8 @@
     "isSaleOn": true,
     "coupons": [
       { "coupon_code": "DARAZ10", "description": "10% off during the sale.", "expiry_date": "2024-12-15" },
-      { "coupon_code": "FLASH5", "description": "Extra 5% off all products.", "expiry_date": "2024-11-20" }
+      { "coupon_code": "FLASH5", "description": "Extra 5% off all products.", "expiry_date": "2024-11-20" },
+      { "coupon_code": "MOBILE30", "description": "Save 30% on mobile phones.", "expiry_date": "2024-11-25" }
     ]
   },
   {
@@ -52,7 +53,8 @@
     "isSaleOn": true,
     "coupons": [
       { "coupon_code": "EATS50", "description": "50% off first three orders.", "expiry_date": "2024-12-31" },
-      { "coupon_code": "BUNDLE5", "description": "$5 off multi-restaurant orders.", "expiry_date": "2024-11-30" }
+      { "coupon_code": "BUNDLE5", "description": "$5 off multi-restaurant orders.", "expiry_date": "2024-11-30" },
+      { "coupon_code": "FEAST10", "description": "Save 10% on orders over $30.", "expiry_date": "2024-11-25" }
     ]
   },
   {
@@ -66,7 +68,8 @@
     "isSaleOn": false,
     "coupons": [
       { "coupon_code": "EXPRESS10", "description": "10% off $50+ orders.", "expiry_date": "2024-12-15" },
-      { "coupon_code": "SHIPFREE", "description": "Free international shipping.", "expiry_date": "2025-01-10" }
+      { "coupon_code": "SHIPFREE", "description": "Free international shipping.", "expiry_date": "2025-01-10" },
+      { "coupon_code": "BUY1GET1", "description": "Buy 1, get 1 free on selected items.", "expiry_date": "2024-12-01" }
     ]
   },
   {
@@ -80,7 +83,8 @@
     "isSaleOn": true,
     "coupons": [
       { "coupon_code": "SHEIN15", "description": "15% off all items.", "expiry_date": "2024-11-25" },
-      { "coupon_code": "FREERETURN", "description": "Free returns on all orders.", "expiry_date": "2024-12-10" }
+      { "coupon_code": "FREERETURN", "description": "Free returns on all orders.", "expiry_date": "2024-12-10" },
+      { "coupon_code": "SHEIN5", "description": "Save $5 on orders over $50.", "expiry_date": "2024-12-01" }
     ]
   },
   {
@@ -94,7 +98,8 @@
     "isSaleOn": false,
     "coupons": [
       { "coupon_code": "WELCOME20", "description": "20% off first order.", "expiry_date": "2024-12-31" },
-      { "coupon_code": "FREEDEL", "description": "Free delivery on $75+ orders.", "expiry_date": "2024-11-30" }
+      { "coupon_code": "FREEDEL", "description": "Free delivery on $75+ orders.", "expiry_date": "2024-11-30" },
+      { "coupon_code": "ZALANOWINTER", "description": "10% off winter collection.", "expiry_date": "2024-12-15" }
     ]
   },
   {
@@ -108,7 +113,8 @@
     "isSaleOn": true,
     "coupons": [
       { "coupon_code": "FLIP10", "description": "Flat 10% off electronics.", "expiry_date": "2025-01-10" },
-      { "coupon_code": "DEAL20", "description": "20% off fashion items.", "expiry_date": "2024-11-30" }
+      { "coupon_code": "DEAL20", "description": "20% off fashion items.", "expiry_date": "2024-11-30" },
+      { "coupon_code": "FLASHSALE", "description": "Extra 15% off flash sale items.", "expiry_date": "2024-11-20" }
     ]
   },
   {
@@ -122,7 +128,8 @@
     "isSaleOn": false,
     "coupons": [
       { "coupon_code": "TRIAL30", "description": "30-day free trial.", "expiry_date": "2025-06-30" },
-      { "coupon_code": "SAVE15", "description": "15% off subscription fees.", "expiry_date": "2024-12-31" }
+      { "coupon_code": "SAVE15", "description": "15% off subscription fees.", "expiry_date": "2024-12-31" },
+      { "coupon_code": "DISCOUNT40", "description": "Save 40% on annual plan.", "expiry_date": "2025-01-05" }
     ]
   },
   {
@@ -136,7 +143,51 @@
     "isSaleOn": true,
     "coupons": [
       { "coupon_code": "WALMARTSAVE", "description": "Save 10% on groceries.", "expiry_date": "2024-12-31" },
-      { "coupon_code": "FREESAMPLE", "description": "Free samples with orders.", "expiry_date": "2025-01-15" }
+      { "coupon_code": "FREESAMPLE", "description": "Free samples with orders.", "expiry_date": "2025-01-15" },
+      { "coupon_code": "DISCOUNT5", "description": "5% off all electronics.", "expiry_date": "2024-11-30" },
+      { "coupon_code": "HOLIDAY10", "description": "Save 10% on holiday gifts.", "expiry_date": "2024-12-25" }
+    ]
+  },
+  {
+    "_id": "011",
+    "brand_name": "BestBuy",
+    "rating": 4.6,
+    "description": "Electronics and gadgets retailer.",
+    "brand_logo": "https://i.ibb.co.com/cc2r9Pp/best-buy.png",
+    "shop_Link": "https://www.bestbuy.com",
+    "category": "Electronics",
+    "isSaleOn": true,
+    "coupons": [
+      { "coupon_code": "BESTBUY10", "description": "10% off all electronics.", "expiry_date": "2024-12-31" },
+      { "coupon_code": "GADGET50", "description": "Save $50 on gadgets.", "expiry_date": "2024-11-25" }
+    ]
+  },
+  {
+    "_id": "012",
+    "brand_name": "Target",
+    "rating": 4.5,
+    "description": "Retail store with a variety of products.",
+    "brand_logo": "https://i.ibb.co.com/Kz7cXtp/Target-transparent-logo-2500x1774.png",
+    "shop_Link": "https://www.target.com",
+    "category": "Retail",
+    "isSaleOn": false,
+    "coupons": [
+      { "coupon_code": "TARGET10", "description": "10% off your first purchase.", "expiry_date": "2024-12-15" },
+      { "coupon_code": "TARGET50", "description": "Save $50 on home products.", "expiry_date": "2025-01-10" }
+    ]
+  },
+  {
+    "_id": "013",
+    "brand_name": "Lazada",
+    "rating": 4.6,
+    "description": "Southeast Asia's e-commerce platform.",
+    "brand_logo": "https://i.ibb.co.com/mTg6CyT/Lazada.jpg",
+    "shop_Link": "https://www.lazada.com",
+    "category": "E-commerce",
+    "isSaleOn": true,
+    "coupons": [
+      { "coupon_code": "LAZA10", "description": "10% off site-wide.", "expiry_date": "2024-12-31" },
+      { "coupon_code": "LAZAFREE", "description": "Free shipping on orders $30+", "expiry_date": "2024-11-30" }
     ]
   }
 ]
