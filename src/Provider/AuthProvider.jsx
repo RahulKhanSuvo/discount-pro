@@ -39,7 +39,6 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
   const info = {
-    name: "rj",
     userRegister,
     updateUserProfile,
     userLogin,

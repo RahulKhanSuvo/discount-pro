@@ -18,7 +18,7 @@ const BrandCard = ({ brand }) => {
     <div className="flex relative justify-between shadow-md  items-center  rounded-3xl p-6">
       <div>
         <img
-          className="w-40 h-10 object-cover rounded-3xl"
+          className=" size-20 rounded-3xl"
           src={brand_logo}
           alt={brand_name}
         />
