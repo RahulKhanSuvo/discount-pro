@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../context/authContext";
 import { toast } from "react-toastify";
 
@@ -9,7 +9,7 @@ const Register = () => {
     useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-
+  const location = useLocation();
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -49,7 +49,7 @@ const Register = () => {
           .then(() => {
             console.log("User profile updated successfully");
             setLoading(false);
-            navigate("/");
+            navigate(location.state ? location.state : "/");
           })
           .catch((error) => {
             console.error("Error updating profile:", error);
@@ -66,7 +66,7 @@ const Register = () => {
     userGoogleSignIn()
       .then(() => {
         toast.success("Logged in with Google!");
-        navigate("/");
+        navigate(location.state ? location.state : "/");
       })
       .catch((error) => {
         console.error("Google Sign-In Error:", error);
@@ -75,7 +75,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center">
+    <div className="min-h-[calc(100vh - 197px)] flex flex-col justify-center items-center">
       <div className="text-center lg:text-left">
         <h1 className="text-4xl font-bold"> Register now!</h1>
       </div>

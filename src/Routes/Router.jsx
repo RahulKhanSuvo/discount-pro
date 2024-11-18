@@ -8,6 +8,7 @@ import CouponPage from "../pages/CouponPage";
 import PrivateRoute from "../Private/PrivateRoute";
 import ProfilePage from "../pages/ProfilePage";
 import ErrorPage from "../components/ErrorPage";
+import About from "../pages/About";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         loader: () => fetch("/coupons.json"),
       },
       {
+        path: "/about",
+        element: <About></About>,
+      },
+      {
         path: "/myProfile",
         element: (
           <PrivateRoute>
@@ -40,29 +45,29 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/brands/:id",
+        element: (
+          <PrivateRoute>
+            <CouponPage></CouponPage>
+          </PrivateRoute>
+        ),
+        loader: async ({ params }) => {
+          const res = await fetch("/coupons.json");
+          const data = await res.json();
+          const singleData = data.find((d) => d._id == params.id);
+          return singleData;
+        },
+      },
     ],
-  },
-  {
-    path: "/login",
-    element: <Login></Login>,
-  },
-  {
-    path: "/register",
-    element: <Register></Register>,
-  },
-  {
-    path: "/brands/:id",
-    element: (
-      <PrivateRoute>
-        <CouponPage></CouponPage>
-      </PrivateRoute>
-    ),
-    loader: async ({ params }) => {
-      const res = await fetch("/coupons.json");
-      const data = await res.json();
-      const singleData = data.find((d) => d._id == params.id);
-      return singleData;
-    },
   },
 ]);
 export default router;

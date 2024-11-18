@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../context/authContext";
 
 const Login = () => {
   const { userLogin, userGoogleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+  console.log(location);
   const handelSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -29,8 +30,11 @@ const Login = () => {
         console.log(error);
       });
   };
+  const handelRegisterBtn = () => {
+    navigate("/register", { state: location.state });
+  };
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center">
+    <div className="min-h-[calc(100vh-197px)] flex flex-col justify-center items-center">
       <div className="text-center lg:text-left">
         <h1 className="text-4xl font-bold">Login now!</h1>
       </div>
@@ -72,9 +76,12 @@ const Login = () => {
           </div>
           <p className="text-center mt-2">
             Don't have an account?{" "}
-            <Link to={"/register"} className="text-[#8529CD] font-medium">
+            <button
+              onClick={handelRegisterBtn}
+              className="text-[#8529CD] font-medium"
+            >
               SignUp
-            </Link>
+            </button>
           </p>
           <div className="divider">OR</div>
         </form>
