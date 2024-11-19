@@ -3,11 +3,12 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../context/authContext";
 import { toast } from "react-toastify";
-
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 const Register = () => {
   const { userRegister, updateUserProfile, userGoogleSignIn, setLoading } =
     useContext(AuthContext);
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const handleSubmit = (e) => {
@@ -115,17 +116,23 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
               name="password"
               className="input input-bordered"
               required
             />
+            <p
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 cursor-pointer text-xl top-12"
+            >
+              {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye />}
+            </p>
             {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
           </div>
           <div className="form-control mt-6">

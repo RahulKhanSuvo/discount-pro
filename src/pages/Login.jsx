@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../context/authContext";
-import { FaEye } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const { userLogin, userGoogleSignIn } = useContext(AuthContext);
@@ -58,7 +58,7 @@ const Login = () => {
               <span className="label-text">Password</span>
             </label>
             <input
-              type={setShowPassword ? "text" : "password"}
+              type={showPassword ? "text" : "password"}
               placeholder="password"
               name="password"
               className="input input-bordered"
@@ -66,9 +66,9 @@ const Login = () => {
             />
             <p
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 cursor-pointer bottom-12"
+              className="absolute right-3 cursor-pointer text-xl bottom-12"
             >
-              <FaEye />
+              {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye />}
             </p>
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">
