@@ -20,7 +20,7 @@ const ProfileUpdate = () => {
   };
 
   return (
-    <div className="hero-content items-center justify-center flex-col ">
+    <div className=" flex min-h-[calc(100vh-197px)] items-center justify-center  ">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <form onSubmit={handelSubmit} className="card-body">
           <div className="form-control">
