@@ -43,7 +43,6 @@ const Register = () => {
         toast.success("Registration successful!");
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
-            console.log("User profile updated successfully");
             setLoading(false);
             navigate(location.state ? location.state : "/");
           })
@@ -71,91 +70,104 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-[calc(100vh - 197px)] flex flex-col mt-8 justify-center items-center">
-      <div className="text-center lg:text-left">
-        <h1 className="text-4xl font-bold"> Register now!</h1>
-      </div>
-      <div className="card p-6 bg-base-100 w-full mt-6 max-w-lg shrink-0 shadow-2xl">
-        <form onSubmit={handleSubmit}>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Name</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Enter your name"
-              name="name"
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Photo URL</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Enter your photo URL"
-              name="photo"
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              name="email"
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control relative">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
-            <input
-              type={showPassword ? "text" : "password"}
-              placeholder="Enter your password"
-              name="password"
-              className="input input-bordered"
-              required
-            />
-            <p
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 cursor-pointer text-xl top-12"
-            >
-              {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye />}
+    <section className="min-h-[calc(100vh-197px)] pt-10 bg-[#F8F8F8]">
+      {" "}
+      <div className=" flex flex-col justify-center items-center">
+        <div className="text-center lg:text-left">
+          <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
+            {" "}
+            Register now!
+          </h1>
+        </div>
+        <div
+          style={{
+            boxShadow: "5px 5px 3px rgba(243, 243, 243, 1)",
+          }}
+          className="card rounded-sm p-6 bg-white w-full mt-6 max-w-lg shrink-0 shadow-md "
+        >
+          <form onSubmit={handleSubmit}>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                name="name"
+                className="input rounded-sm input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo URL</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your photo URL"
+                name="photo"
+                className="input rounded-sm input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Email</span>
+              </label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                name="email"
+                className="input  rounded-sm input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control relative">
+              <label className="label">
+                <span className="label-text">Password</span>
+              </label>
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter your password"
+                name="password"
+                className="input rounded-sm input-bordered"
+                required
+              />
+              <p
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 cursor-pointer text-xl top-12"
+              >
+                {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye />}
+              </p>
+              {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
+            </div>
+            <div className="form-control mt-6">
+              <button className="btn text-white rounded-sm bg-[#8529CD] hover:bg-[#6A1D9A] hover:scale-105 transition-all">
+                Register
+              </button>
+            </div>
+            <p className="text-center mt-2">
+              Already have an account?{" "}
+              <Link to="/login" className="text-[#8529CD] font-medium">
+                Login
+              </Link>
             </p>
-            {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
-          </div>
-          <div className="form-control mt-6">
-            <button className="btn text-white rounded-full bg-[#8529CD] hover:bg-[#6A1D9A] hover:scale-105 transition-all">
-              Register
+            <div className="divider">OR</div>
+          </form>
+          <div>
+            <button
+              onClick={handleGoogleSign}
+              className="flex items-center justify-center w-full border border-gray-300 rounded-sm hover:scale-105 px-4 py-2 shadow-sm bg-white transition-all hover:bg-gray-100"
+            >
+              <FcGoogle className="mr-2" />
+              <span className="text-gray-600 font-medium">
+                Login with Google
+              </span>
             </button>
           </div>
-          <p className="text-center mt-2">
-            Already have an account?{" "}
-            <Link to="/login" className="text-[#8529CD] font-medium">
-              Login
-            </Link>
-          </p>
-          <div className="divider">OR</div>
-        </form>
-        <div>
-          <button
-            onClick={handleGoogleSign}
-            className="flex items-center justify-center w-full border border-gray-300 rounded-full px-4 py-2 shadow-sm bg-white hover:bg-gray-100"
-          >
-            <FcGoogle className="mr-2" />
-            <span className="text-gray-600 font-medium">Login with Google</span>
-          </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

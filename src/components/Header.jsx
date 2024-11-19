@@ -12,7 +12,7 @@ const Header = () => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          `flex lg:flex-col items-center  ${
+          `flex lg:flex-col hover:text-[#8529CD]  items-center  ${
             isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
           }`
         }
@@ -24,7 +24,7 @@ const Header = () => {
       <NavLink
         to="/brands"
         className={({ isActive }) =>
-          `flex lg:flex-col items-center ${
+          `flex lg:flex-col hover:text-[#8529CD] items-center ${
             isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
           }`
         }
@@ -37,7 +37,7 @@ const Header = () => {
         <NavLink
           to="/my-Profile"
           className={({ isActive }) =>
-            `flex  lg:flex-col items-center ${
+            `flex  hover:text-[#8529CD] lg:flex-col items-center ${
               isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
             }`
           }
@@ -50,7 +50,7 @@ const Header = () => {
       <NavLink
         to="/about"
         className={({ isActive }) =>
-          `flex  lg:flex-col items-center ${
+          `flex hover:text-[#8529CD]  lg:flex-col items-center ${
             isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
           }`
         }

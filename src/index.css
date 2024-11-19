@@ -1,8 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer utilities {
   .no-overflow {
     overflow-x: hidden;
   }
+}
+
+html {
+  overflow-x: scroll;
 }
