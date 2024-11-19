@@ -13,40 +13,15 @@ const Login = () => {
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const validatePassword = (password) => {
-    const minLength = 6;
-    const hasUppercase = /[A-Z]/;
-    const hasLowercase = /[a-z]/;
-
-    if (password.length < minLength) {
-      return "Password must be at least 6 characters long.";
-    }
-    if (!hasUppercase.test(password)) {
-      return "Password must contain at least one uppercase letter.";
-    }
-    if (!hasLowercase.test(password)) {
-      return "Password must contain at least one lowercase letter.";
-    }
-    return "";
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    const validationError = validatePassword(password);
-    if (validationError) {
-      setError(validationError);
-      return;
-    }
     setError("");
     userLogin(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
         navigate(location.state ? location.state : "/");
       })
-      .catch((error) => {
+      .catch(() => {
         setError("Invalid email or password.");
-        console.log(error);
       });
   };
 
@@ -55,16 +30,17 @@ const Login = () => {
       .then(() => {
         navigate(location.state ? location.state : "/");
       })
-      .catch((error) => {
+      .catch(() => {
         setError("Google login failed.");
-        console.log(error);
       });
   };
 
   const handleRegisterBtn = () => {
     navigate("/register", { state: location.state });
   };
-
+  const handelForgetPassword = () => {
+    navigate("/forget-password", { state: { email } });
+  };
   return (
     <div className="min-h-[calc(100vh-197px)] flex flex-col justify-center items-center">
       <div className="text-center lg:text-left">
@@ -106,7 +82,10 @@ const Login = () => {
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </p>
             <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
+              <a
+                onClick={handelForgetPassword}
+                className="label-text-alt link link-hover"
+              >
                 Forgot password?
               </a>
             </label>

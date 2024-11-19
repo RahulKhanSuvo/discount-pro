@@ -10,6 +10,7 @@ import ProfilePage from "../pages/ProfilePage";
 import ErrorPage from "../components/ErrorPage";
 import About from "../pages/About";
 import ProfileUpdate from "../pages/ProfileUpdate";
+import ForgetPassword from "../pages/ForgetPassword";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/forget-password",
+        element: <ForgetPassword></ForgetPassword>,
       },
       {
         path: "/brand/:id",

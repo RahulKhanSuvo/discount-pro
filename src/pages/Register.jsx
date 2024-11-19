@@ -17,15 +17,16 @@ const Register = () => {
     const password = e.target.password.value;
     const name = e.target.name.value;
     const photo = e.target.photo.value;
-
-    // Reset error message
     setError("");
 
-    // Password validation
     const hasUppercase = /[A-Z]/.test(password);
     const hasLowercase = /[a-z]/.test(password);
     const hasMinLength = password.length >= 6;
-
+    if (!hasMinLength) {
+      setError("Password must be at least 6 characters long.");
+      toast.error("Password must be at least 6 characters long.");
+      return;
+    }
     if (!hasUppercase) {
       setError("Password must contain at least one uppercase letter.");
       toast.error("Password must contain at least one uppercase letter.");
@@ -36,11 +37,7 @@ const Register = () => {
       toast.error("Password must contain at least one lowercase letter.");
       return;
     }
-    if (!hasMinLength) {
-      setError("Password must be at least 6 characters long.");
-      toast.error("Password must be at least 6 characters long.");
-      return;
-    }
+
     userRegister(email, password)
       .then(() => {
         toast.success("Registration successful!");
