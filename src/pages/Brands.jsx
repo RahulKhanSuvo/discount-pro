@@ -18,7 +18,7 @@ const Brands = () => {
   );
 
   return (
-    <section className="bg-[#F8F8F8] pb-10">
+    <section className="bg-[#F8F8F8] no-overflow pb-10">
       <div className="bg-[#8529CD] py-4">
         <h2 className="text-center text-2xl font-bold mb-4 text-white">
           Find Your Favorite Brands

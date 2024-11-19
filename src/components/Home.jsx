@@ -14,7 +14,7 @@ const Home = () => {
   }, []);
   const { topBrands, brands } = useLoaderData();
   return (
-    <div className="bg-[#F8F8F8] pb-10">
+    <div className="bg-[#F8F8F8] no-overflow pb-10">
       <section className="mx-2 lg:container lg:mx-auto">
         <Slider></Slider>
         <div data-aos="fade-up" data-aos-anchor-placement="center-center"></div>
