@@ -15,6 +15,12 @@ You can check out the live version of this project here:
 - **User Authentication:** 
   - Users can sign up or log in using their **email** or **Google account** through **Firebase Authentication**.
   
+- **User profile update:** 
+  - Users can there profile , user can add profile photo.
+
+- **Forget Password:** 
+  - Users can reset there password
+
 - **Browse Coupons:** 
   - Users can browse coupons for different brands and stores.
   - View details like **discount amount**, **expiry date**, and **product categories**.
