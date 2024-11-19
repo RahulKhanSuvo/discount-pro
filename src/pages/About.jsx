@@ -1,7 +1,12 @@
 const About = () => {
   return (
     <div className="bg-gray-100 py-10 px-6">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+      <div
+        style={{
+          boxShadow: "5px 5px 3px rgba(243, 243, 243, 1)",
+        }}
+        className="max-w-4xl mx-auto bg-white  rounded-sm mb-36 p-6"
+      >
         <h2 className="text-3xl font-bold text-center mb-4 text-[#8529CD]">
           About Me
         </h2>

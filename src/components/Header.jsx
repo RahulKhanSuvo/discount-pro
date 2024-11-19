@@ -113,7 +113,41 @@ const Header = () => {
             {isBar ? <IoMdClose size={25} /> : <FaBars size={25} />}
           </button>
           {isBar && (
-            <div className="absolute right-0 z-50 bg-white w-36 p-6 border border-[#8529CD] flex flex-col gap-3 rounded-lg">
+            <div className="absolute right-0 z-50 bg-white w-44 p-6 border border-[#8529CD] flex flex-col gap-3 rounded-lg">
+              <div className="md:hidden">
+                {user ? (
+                  <div className="flex items-center flex-col gap-3">
+                    <img
+                      src={user.photoURL}
+                      alt="User Profile"
+                      className="w-8 h-8 rounded-full"
+                    />
+                    <span className="text-sm">{user.displayName}</span>
+                    <button
+                      onClick={userLogout}
+                      className="text-sm px-2 font-semibold text-white rounded-full bg-[#8529CD] hover:underline"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-4">
+                    <Link
+                      to={"/login"}
+                      className="text-sm font-mono rounded-full text-[#8529CD] hover:underline"
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      to={"/register"}
+                      className="text-sm px-1 font-mono text-white  rounded-full bg-[#8529CD] hover:underline"
+                    >
+                      Register
+                    </Link>
+                  </div>
+                )}
+              </div>
+
               {links}
             </div>
           )}
