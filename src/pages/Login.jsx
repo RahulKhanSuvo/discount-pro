@@ -30,8 +30,8 @@ const Login = () => {
   const handleGoogleLogin = () => {
     userGoogleSignIn()
       .then(() => {
-        navigate(location.state ? location.state : "/");
         toast.success("loin successful ");
+        navigate(location.state ? location.state : "/");
       })
       .catch(() => {
         setError("Google login failed.");
