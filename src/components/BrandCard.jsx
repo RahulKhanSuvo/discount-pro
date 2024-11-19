@@ -1,4 +1,3 @@
-import { FaStar } from "react-icons/fa"; // For the star icon
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 
@@ -15,7 +14,12 @@ const BrandCard = ({ brand }) => {
   } = brand;
 
   return (
-    <div className="flex flex-col md:flex-row border relative justify-between shadow-lg items-center rounded-md p-6 ">
+    <div
+      style={{
+        boxShadow: "5px 5px 3px rgba(243, 243, 243, 1)",
+      }}
+      className="flex flex-col bg-white md:flex-row  relative justify-between  items-center rounded-sm p-6 "
+    >
       <div className="border rounded-sm">
         <img
           className="w-56 object-fill md:w-32 h-14 p-3 border-b "
@@ -52,7 +56,7 @@ const BrandCard = ({ brand }) => {
       <div className="flex flex-col items-center">
         <Link
           to={`/brand/${_id}`}
-          className="rounded-full py-2 drop-shadow-md text-[#8529CD] font-bold text-lg btn shadow-sm px-3"
+          className="rounded-sm py-2 text-white  bg-[#FFA619] font-bold text-lg btn shadow-sm px-3"
         >
           View Coupons
         </Link>

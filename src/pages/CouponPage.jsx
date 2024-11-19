@@ -1,40 +1,26 @@
-import CopyToClipboard from "react-copy-to-clipboard";
 import { useLoaderData } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import ReactStars from "react-rating-stars-component";
 import Coupon from "../components/Coupon";
 const CouponPage = () => {
   const data = useLoaderData();
-  const {
-    _id,
-    brand_name,
-    rating,
-    description,
-    brand_logo,
-    shop_Link,
-    isSaleOn,
-    coupons,
-  } = data;
-  const handleCopySuccess = () => {
-    toast.success("Coupon code copied to clipboard!");
-  };
+  const { brand_name, rating, description, brand_logo, shop_Link, coupons } =
+    data;
 
-  const handleUseNow = (link) => {
-    window.open(link, "_blank");
-  };
   return (
-    <section className="max-h-screens">
-      <div className="container mx-auto">
-        <div className=" flex flex-col items-center border p-10">
-          <div className="text-center  p-4 gap-10 flex items-center lg:text-left">
+    <section className="bg-[#F8F8F8] pb-10">
+      <div className="lg:container mx-3 lg:mx-auto">
+        <div className="">
+          <div
+            style={{
+              boxShadow: "5px 5px 3px rgba(243, 243, 243, 1)",
+            }}
+            className="text-center  p-4 gap-10 flex bg-white flex-col md:flex-row items-center justify-center lg:text-left"
+          >
             <h1 className="text-4xl font-bold">{brand_name}</h1>
-            <img
-              src={brand_logo}
-              alt={brand_name}
-              className=" h-28 object-cover  mt-4"
-            />
+            <img src={brand_logo} alt={brand_name} className="h-28 w-56 mt-4" />
             <div className="mt-2 text-xl">
-              {`Rating: ${rating}`}
+              <p>{`Rating: ${rating}`}</p>
               <ReactStars
                 isHalf={true}
                 count={5}
@@ -46,6 +32,7 @@ const CouponPage = () => {
             </div>
           </div>
 
+          <h3 className=""> Description: {description}</h3>
           <div className="grid border-t grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
             {coupons.map((coupon) => (
               <Coupon

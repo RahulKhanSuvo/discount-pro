@@ -10,7 +10,7 @@ const TopBrand = ({ data: brands }) => {
           pauseOnHover={true}
           speed={80}
           gradient={false}
-          className="bg-[#f6f5f7] rounded-sm p-2"
+          className="bg-white rounded-sm p-2"
         >
           {brands.map((brand) => (
             <div key={brand.id} className=" py-2 px-5 cursor-pointer">

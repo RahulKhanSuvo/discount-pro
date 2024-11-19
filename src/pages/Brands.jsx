@@ -1,17 +1,24 @@
 import { FaSearch } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import BrandCard from "../components/BrandCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Brands = () => {
   const data = useLoaderData();
   const [searchTerm, setSearchTerm] = useState("");
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const filteredBrands = data.filter((brand) =>
     brand.brand_name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   return (
-    <section className="">
+    <section className="bg-[#F8F8F8] pb-10">
       <div className="bg-[#8529CD] py-4">
         <h2 className="text-center text-2xl font-bold mb-4 text-white">
           Find Your Favorite Brands
@@ -31,8 +38,16 @@ const Brands = () => {
       </div>
       <div className="lg:container mx-3 lg:mx-auto mt-6 flex flex-col gap-6">
         {filteredBrands.length > 0 ? (
-          filteredBrands.map((brand) => (
-            <BrandCard brand={brand} key={brand._id}></BrandCard>
+          filteredBrands.map((brand, index) => (
+            <div
+              key={brand._id}
+              data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+              data-aos-duration="1000"
+              data-aos-offset="100"
+              data-aos-easing="ease-in-out"
+            >
+              <BrandCard brand={brand} />
+            </div>
           ))
         ) : (
           <p className="text-center text-white">No brands found.</p>

@@ -8,13 +8,7 @@ import slideFour from "../assets/241114-acr-953-walmart-crsl-dt.jpg";
 const Slider = () => {
   return (
     <div>
-      <Carousel
-        showThumbs={false}
-        autoPlay={true}
-        interval={3000}
-        infiniteLoop={true}
-        transitionTime={500}
-      >
+      <Carousel showThumbs={false} infiniteLoop={true}>
         <div>
           <img
             src={slideOne}

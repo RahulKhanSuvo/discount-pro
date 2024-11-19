@@ -18,7 +18,12 @@ const Coupon = ({ coupon, shopLink }) => {
   };
 
   return (
-    <div className="flex flex-col bg-white shadow-lg rounded-lg border border-gray-200 p-6">
+    <div
+      style={{
+        boxShadow: "5px 5px 3px rgba(243, 243, 243, 1)",
+      }}
+      className="flex flex-col bg-white   p-6"
+    >
       <div className="flex-grow">
         <h2 className="text-xl font-bold text-[#8529CD]">
           {coupon.coupon_code}
@@ -47,14 +52,14 @@ const Coupon = ({ coupon, shopLink }) => {
 
       <div className="flex justify-between mt-6">
         <CopyToClipboard text={coupon.coupon_code} onCopy={handleCopySuccess}>
-          <button className="px-4 py-2 bg-[#8529CD] text-white font-semibold text-sm rounded-lg shadow-md hover:bg-[#6A1D9A] hover:scale-105 transition-all">
+          <button className="px-4 py-2 bg-[#8529CD] text-white font-semibold text-sm rounded-sm shadow-md hover:bg-[#6A1D9A] hover:scale-105 transition-all">
             {copied ? "Copied!" : "Copy Code"}
           </button>
         </CopyToClipboard>
 
         <button
           onClick={handleUseNow}
-          className="px-4 py-2 bg-green-500 text-white font-semibold text-sm rounded-lg shadow-md hover:bg-green-400 hover:scale-105 transition-all"
+          className="px-4 py-2 bg-green-500 text-white font-semibold text-sm rounded-sm shadow-md hover:bg-green-400 hover:scale-105 transition-all"
         >
           Use Now
         </button>
