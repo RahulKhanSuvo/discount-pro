@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import AuthContext from "../context/authContext";
+import { Link } from "react-router-dom";
 
 const ProfilePage = () => {
   const { user } = useContext(AuthContext);
@@ -31,12 +32,12 @@ const ProfilePage = () => {
           <p className="text-gray-700">{user?.email || "No Email Provided"}</p>
         </div>
         <div className="mt-6 flex flex-col gap-4">
-          <button className="btn bg-[#8529CD] text-white rounded-full hover:bg-[#6A1D9A]">
+          <Link
+            to={"/my-profile/update"}
+            className="btn bg-[#8529CD] text-white rounded-full hover:bg-[#6A1D9A]"
+          >
             Update Profile
-          </button>
-          <button className="btn bg-[#29A853] text-white rounded-full hover:bg-[#2C8E47]">
-            Change Password
-          </button>
+          </Link>
         </div>
       </div>
     </div>

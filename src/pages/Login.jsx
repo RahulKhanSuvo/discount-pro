@@ -1,13 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../context/authContext";
+import { FaEye } from "react-icons/fa";
 
 const Login = () => {
   const { userLogin, userGoogleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
+  const [showPassword, setShowPassword] = useState(false);
   const handelSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -52,17 +53,23 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
-              type="password"
+              type={setShowPassword ? "text" : "password"}
               placeholder="password"
               name="password"
               className="input input-bordered"
               required
             />
+            <p
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 cursor-pointer bottom-12"
+            >
+              <FaEye />
+            </p>
             <label className="label">
               <a href="#" className="label-text-alt link link-hover">
                 Forgot password?

@@ -50,7 +50,7 @@ const BrandCard = ({ brand }) => {
       {/* View Coupons Button */}
       <div className="flex flex-col items-center">
         <Link
-          to={`/brands/${_id}`}
+          to={`/brand/${_id}`}
           className="rounded-full py-2 drop-shadow-md text-[#8529CD] font-bold text-lg btn shadow-sm px-3"
         >
           View Coupons

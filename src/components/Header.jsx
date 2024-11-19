@@ -42,7 +42,7 @@ const Header = () => {
 
           {user && (
             <NavLink
-              to="/myProfile"
+              to="/my-Profile"
               className={({ isActive }) =>
                 `flex flex-col items-center ${
                   isActive ? "text-[#8529CD] font-bold" : "text-gray-700"

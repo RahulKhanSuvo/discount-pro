@@ -41,10 +41,8 @@ const Register = () => {
       return;
     }
     userRegister(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
         toast.success("Registration successful!");
-
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
             console.log("User profile updated successfully");
