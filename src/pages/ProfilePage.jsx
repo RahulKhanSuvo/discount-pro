@@ -38,6 +38,12 @@ const ProfilePage = () => {
           >
             Update Profile
           </Link>
+          <Link
+            to={"/forget-password"}
+            className="btn bg-[#4ADE80] text-white rounded-full hover:bg-[#31ff7d]"
+          >
+            Forget password
+          </Link>
         </div>
       </div>
     </div>

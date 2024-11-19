@@ -10,7 +10,7 @@ const Gift = () => {
   }, []);
   return (
     <div className="bg-[#242463] mt-10">
-      <div className=" container mx-auto py-20">
+      <div className="mx-2 lg:container lg:mx-auto py-20">
         <h3 className="font-medium text-3xl text-white pb-4">
           Explore our holiday gift guide
         </h3>

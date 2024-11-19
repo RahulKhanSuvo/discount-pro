@@ -9,13 +9,13 @@ const Home = () => {
   const { topBrands, brands } = useLoaderData();
   return (
     <div>
-      <section className="container mx-auto">
+      <section className="mx-2 lg:container lg:mx-auto">
         <Slider></Slider>
         <TopBrand data={topBrands}></TopBrand>
         <BrandsOnSale data={brands}></BrandsOnSale>
       </section>
       <Gift></Gift>
-      <section className="container mx-auto">
+      <section className="lg:container lg:mx-auto mx-2">
         <HolidayToy></HolidayToy>
       </section>
     </div>

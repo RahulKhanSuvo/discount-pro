@@ -1,74 +1,78 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaHome, FaTags, FaUser, FaInfoCircle } from "react-icons/fa";
+import { FaHome, FaTags, FaUser, FaInfoCircle, FaBars } from "react-icons/fa";
 import AuthContext from "../context/authContext";
+import { IoMdClose } from "react-icons/io";
 
 const Header = () => {
+  const [isBar, setBar] = useState(false);
   const { user, userLogout } = useContext(AuthContext);
+  const links = (
+    <>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          `flex lg:flex-col items-center  ${
+            isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
+          }`
+        }
+      >
+        <FaHome size={20} />
+        <span className="text-sm">Home</span>
+      </NavLink>
 
+      <NavLink
+        to="/brands"
+        className={({ isActive }) =>
+          `flex lg:flex-col items-center ${
+            isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
+          }`
+        }
+      >
+        <FaTags size={20} />
+        <span className="text-sm">Brands</span>
+      </NavLink>
+
+      {user && (
+        <NavLink
+          to="/my-Profile"
+          className={({ isActive }) =>
+            `flex  lg:flex-col items-center ${
+              isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
+            }`
+          }
+        >
+          <FaUser size={20} />
+          <span className="text-sm">My Profile</span>
+        </NavLink>
+      )}
+
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          `flex  lg:flex-col items-center ${
+            isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
+          }`
+        }
+      >
+        <FaInfoCircle size={20} />
+        <span className="text-sm">About Dev</span>
+      </NavLink>
+    </>
+  );
   return (
     <div className="border-b bg-white z-50 sticky top-0 shadow-sm">
-      <nav className="flex container mx-auto py-4 justify-between items-center">
+      <nav className="flex mx-2 lg:container lg:mx-auto py-4 justify-between items-center">
         {/* Logo Section */}
         <Link to="/">
           <h1 className="font-bold text-2xl text-[#8529CD]">DISCOUNT PRO</h1>
         </Link>
 
         {/* Centered Navigation Links with Icons */}
-        <div className="flex gap-8">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `flex flex-col items-center ${
-                isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
-              }`
-            }
-          >
-            <FaHome size={20} />
-            <span className="text-sm">Home</span>
-          </NavLink>
-
-          <NavLink
-            to="/brands"
-            className={({ isActive }) =>
-              `flex flex-col items-center ${
-                isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
-              }`
-            }
-          >
-            <FaTags size={20} />
-            <span className="text-sm">Brands</span>
-          </NavLink>
-
-          {user && (
-            <NavLink
-              to="/my-Profile"
-              className={({ isActive }) =>
-                `flex flex-col items-center ${
-                  isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
-                }`
-              }
-            >
-              <FaUser size={20} />
-              <span className="text-sm">My Profile</span>
-            </NavLink>
-          )}
-
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `flex flex-col items-center ${
-                isActive ? "text-[#8529CD] font-bold" : "text-gray-700"
-              }`
-            }
-          >
-            <FaInfoCircle size={20} />
-            <span className="text-sm">About Dev</span>
-          </NavLink>
-        </div>
+        <div className="hidden lg:flex gap-8">{links}</div>
 
         {/* Authentication Section */}
-        <div className="flex items-center gap-5">
+        <div className="hidden md:flex  items-center gap-5">
           {user ? (
             <div className="flex items-center gap-3">
               <img
@@ -98,6 +102,19 @@ const Header = () => {
               >
                 Register
               </Link>
+            </div>
+          )}
+        </div>
+        <div className="lg:hidden relative">
+          <button
+            onClick={() => setBar(!isBar)}
+            className="text-2xl font-semibold text-[#8529CD]"
+          >
+            {isBar ? <IoMdClose size={25} /> : <FaBars size={25} />}
+          </button>
+          {isBar && (
+            <div className="absolute right-0 z-50 bg-white w-36 p-6 border border-[#8529CD] flex flex-col gap-3 rounded-lg">
+              {links}
             </div>
           )}
         </div>

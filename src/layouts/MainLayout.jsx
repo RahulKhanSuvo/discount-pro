@@ -13,17 +13,16 @@ const MainLayout = () => {
     <div className="">
       {user && (
         <div className="flex justify-center bg-[#8529CD] items-center">
-          <h2 className="text-2xl text-white font-semibold text-center">
+          <h2 className="md:text-2xl text-white font-semibold text-center">
             Welcome back, {user.displayName || user.email}!
           </h2>
         </div>
       )}
       <Header />
-      {/* Main content with dynamic height using calc() */}
       <div
         className=""
         style={{
-          minHeight: "calc(100vh - 197px)", // Adjust these values based on your header and footer heights
+          minHeight: "calc(100vh - 197px)",
         }}
       >
         <Outlet />
