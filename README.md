@@ -1,68 +1,73 @@
-# **Discount Pro**
+# Discount PRO: A Coupon Collecting Application
 
-## **Purpose**
-Discount Pro is a web application designed to manage and showcase discounts efficiently. It provides a seamless platform for businesses to advertise their deals and for users to discover exciting offers across various categories.
+**Discount PRO** is a simple Coupon Collecting Application designed to help users easily find and use discount coupons for popular e-commerce shops in the world. The app collects various types of vouchers and coupon codes from e-commerce stores, allowing users to easily apply them to save money while shopping online.
 
----
+## Purpose
 
-## **Live URL**
-Explore the live project here:  
-[Live Demo](#) *(Replace `#` with the actual live URL)*
+The purpose of **Discount PRO** is to bring together all the available discount coupons and voucher codes from popular e-commerce stores, so that users can easily browse, select, and apply them in one place. This helps users to save money and enjoy discounts on their purchases.
 
----
+## Live URL
 
-## **Key Features**
-- **Discount Display**:
-  - A categorized view of discounts for easy browsing.
-  - Filter options to narrow down search results.
+You can check out the live version of this project here:  
+[**Discount PRO - Live Demo**](https://discount-pro-5cbf6.web.app/)
 
-- **Interactive Features**:
-  - Smooth animations for an engaging user experience.
-  - Carousel and marquee effects for highlighting top deals.
 
-- **User Experience**:
-  - Toast notifications to improve user interactions.
-  - Star-based rating system for user feedback.
+- **User Authentication:** 
+  - Users can sign up or log in using their **email** or **Google account** through **Firebase Authentication**.
+  
+- **Browse Coupons:** 
+  - Users can browse coupons for different brands and stores.
+  - View details like **discount amount**, **expiry date**, and **product categories**.
 
-- **Third-Party Integration**:
-  - Firebase for backend services and data handling.
+- **Copy Coupon Codes:** 
+  - **One-click copy** functionality for users to copy coupon codes to their clipboard.
 
-- **Responsive Design**:
-  - Ensures optimal performance on all devices.
+- **Filter & Search Coupons:**
+  - Filter coupons by **store**, **brand**, or **category** (e.g., fashion, electronics).
+  - Search for specific coupons using a keyword.
 
----
+- **Responsive Design:**
+  - The app is fully responsive and works seamlessly on **desktop**, **tablet**, and **mobile** devices.
 
-## **Technologies & Tools Used**
-- **React**: Component-based library for building the UI.
-- **Firebase**: Backend-as-a-service for data storage and authentication.
-- **Tailwind CSS**: Utility-first CSS framework for responsive and efficient styling.
-- **Swiper.js**: For responsive, customizable carousels.
-- **AOS & Animate.css**: For scroll-triggered and general animations.
-- **React Toastify**: For elegant toast notifications.
+- **Animations:**
+  - **AOS (Animate On Scroll)** for scroll-triggered animations.
 
----
+- **Carousel:** 
+  - **React Responsive Carousel** for displaying product images in a slideshow format.
 
-## **NPM Packages Used**
-Here is the complete list of npm packages used in the project:
+- **Toast Notifications:**
+  - **React Toastify** for displaying toast notifications for actions like successful login or coupon copy.
 
-| **Package Name**                | **Version** | **Purpose**                                                    |
-|----------------------------------|-------------|----------------------------------------------------------------|
-| `animate.css`                   | `^4.1.1`    | CSS-based animations.                                          |
-| `aos`                           | `^2.3.4`    | Scroll-triggered animations.                                   |
-| `firebase`                      | `^11.0.2`   | Backend services and authentication.                          |
-| `react`                         | `^18.3.1`   | Core library for building the UI.                             |
-| `react-copy-to-clipboard`       | `^5.1.0`    | Enables easy copy-to-clipboard functionality.                 |
-| `react-dom`                     | `^18.3.1`   | React's DOM rendering library.                                |
-| `react-fast-marquee`            | `^1.6.5`    | For scrolling marquee effects.                                |
-| `react-icons`                   | `^5.3.0`    | Icons for enhanced visuals.                                   |
-| `react-rating-stars-component`  | `^2.2.0`    | Star-based rating component for user feedback.                |
-| `react-responsive-carousel`     | `^3.2.23`   | For creating responsive carousels.                            |
-| `react-router-dom`              | `^6.28.0`   | Routing and navigation.                                       |
-| `react-toastify`                | `^10.0.6`   | Toast notifications.                                          |
-| `swiper`                        | `^11.1.15`  | Advanced slider component for React.                          |
 
----
+## Tech Stack
 
-## **How to Run the Project**
-To run this project locally, follow these steps:
+- **Frontend:**
+  - React for building the user interface.
+  - Tailwind CSS for styling the components.
+  - React Router for page routing.
+  - React Icons for adding icons to the UI.
+  - Animate.css for global animations.
+  - React Rating Stars Component for displaying user ratings for coupons or products.
+  - Swiper for building interactive slideshows or carousels.
+  - React Fast Marquee for scrolling text or coupon updates.
+  - AOS for triggering animations when scrolling.
 
+- **Backend:**
+  - Firebase Authentication for managing user accounts and sign-ins.
+  - Firebase Firestore for storing coupon data and user information.
+
+- **State Management:**
+  - React Context API for managing global state, including user data and saved coupons.
+
+- **NPM Packages Used:**
+  - `firebase` - For Firebase Authentication and Firestore integration.
+  - `react-router-dom` - For handling routing and navigation between pages.
+  - `react-icons` - For adding icons.
+  - `react-toastify` - For showing toast notifications.
+  - `animate.css` - For CSS animations.
+  - `aos` - For scroll-based animations.
+  - `swiper` - For creating carousels and image slideshows.
+  - `react-fast-marquee` - For scrolling text or coupon updates.
+  - `react-copy-to-clipboard` - For enabling copy-to-clipboard functionality for coupons.
+  - `react-rating-stars-component` - For adding star rating features.
+  - `react-responsive-carousel` - For displaying image carousels and product slideshows.
