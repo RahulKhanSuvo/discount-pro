@@ -4,7 +4,18 @@ import { useEffect } from "react";
 
 const BrandsOnSale = ({ data: brands }) => {
   useEffect(() => {
-    AOS.init({ duration: 700 });
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+    });
+    window.addEventListener("load", () => {
+      AOS.refresh();
+    });
+    return () => {
+      window.removeEventListener("load", () => {
+        AOS.refresh();
+      });
+    };
   }, []);
 
   const saleBrands = brands.filter((brand) => brand.isSaleOn);

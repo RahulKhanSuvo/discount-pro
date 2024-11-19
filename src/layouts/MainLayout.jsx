@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useContext } from "react";
 import AuthContext from "../context/authContext";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop ";
 
 const MainLayout = () => {
   const { user } = useContext(AuthContext);
@@ -25,6 +26,7 @@ const MainLayout = () => {
           minHeight: "calc(100vh - 197px)",
         }}
       >
+        <ScrollToTop></ScrollToTop>
         <Outlet />
       </div>
       <Footer />

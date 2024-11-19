@@ -3,7 +3,6 @@ import { FcGoogle } from "react-icons/fc";
 import { useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../context/authContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { toast } from "react-toastify";
 
 const Login = () => {
   const { userLogin, userGoogleSignIn } = useContext(AuthContext);
@@ -19,7 +18,6 @@ const Login = () => {
     setError("");
     userLogin(email, password)
       .then(() => {
-        toast.success("loin successful ");
         navigate(location.state ? location.state : "/");
       })
       .catch(() => {
@@ -30,7 +28,6 @@ const Login = () => {
   const handleGoogleLogin = () => {
     userGoogleSignIn()
       .then(() => {
-        toast.success("loin successful ");
         navigate(location.state ? location.state : "/");
       })
       .catch(() => {

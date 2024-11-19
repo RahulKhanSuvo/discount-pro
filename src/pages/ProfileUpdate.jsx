@@ -14,9 +14,7 @@ const ProfileUpdate = () => {
         setLoading(false);
         navigate("/my-Profile");
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch(() => {});
   };
 
   return (

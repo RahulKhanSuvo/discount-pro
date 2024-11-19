@@ -10,20 +10,30 @@ import AOS from "aos";
 import "animate.css";
 const Home = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+    });
+    window.addEventListener("load", () => {
+      AOS.refresh();
+    });
+    return () => {
+      window.removeEventListener("load", () => {
+        AOS.refresh();
+      });
+    };
   }, []);
   const { topBrands, brands } = useLoaderData();
   return (
     <div className="bg-[#F8F8F8] no-overflow pb-10">
       <section className="mx-2 lg:container lg:mx-auto">
         <Slider></Slider>
-        <div data-aos="fade-up" data-aos-anchor-placement="center-center"></div>
         <div className="animate__animated animate__fadeInLeft">
           <TopBrand data={topBrands}></TopBrand>
         </div>
         <BrandsOnSale data={brands}></BrandsOnSale>
       </section>
-      <div data-aos="fade-right">
+      <div data-aos="fade-right" data-aos-duration="1000">
         <Gift></Gift>
       </div>
 

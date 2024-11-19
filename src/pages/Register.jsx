@@ -46,13 +46,11 @@ const Register = () => {
             setLoading(false);
             navigate(location.state ? location.state : "/");
           })
-          .catch((error) => {
-            console.error("Error updating profile:", error);
+          .catch(() => {
             toast.error("Failed to update user profile.");
           });
       })
       .catch((error) => {
-        console.error("Registration error:", error);
         setError(error.message);
         toast.error("Registration failed. Please try again.");
       });
@@ -63,8 +61,7 @@ const Register = () => {
         toast.success("Logged in with Google!");
         navigate(location.state ? location.state : "/");
       })
-      .catch((error) => {
-        console.error("Google Sign-In Error:", error);
+      .catch(() => {
         toast.error("Google sign-in failed.");
       });
   };
