@@ -15,16 +15,17 @@ const BrandCard = ({ brand }) => {
   } = brand;
 
   return (
-    <div className="flex relative justify-between shadow-lg items-center rounded-3xl p-6">
-      {/* Brand Logo and Rating Section */}
-      <div className="border rounded-lg">
+    <div className="flex flex-col md:flex-row border relative justify-between shadow-lg items-center rounded-md p-6 ">
+      <div className="border rounded-sm">
         <img
-          className="w-32 p-3 border-b rounded-t-lg"
+          className="w-56 object-fill md:w-32 h-14 p-3 border-b "
           src={brand_logo}
           alt={brand_name}
         />
         <div className="p-3">
-          <h3 className="text-lg border-b font-semibold">{brand_name}</h3>
+          <h3 className="text-lg text-center border-b font-semibold">
+            {brand_name}
+          </h3>
 
           {/* Rating Section */}
           <div className="flex items-center justify-center space-x-2 mt-2">
@@ -42,8 +43,8 @@ const BrandCard = ({ brand }) => {
       </div>
 
       {/* Description Section */}
-      <div>
-        <h3>{brand_name}</h3>
+      <div className="">
+        <h3 className="font-semibold pt-3 md:p-0">{brand_name}</h3>
         <p className="text-sm text-gray-700">{description}</p>
       </div>
 

@@ -16,7 +16,7 @@ const Brands = () => {
         <h2 className="text-center text-2xl font-bold mb-4 text-white">
           Find Your Favorite Brands
         </h2>
-        <div className="flex container mx-auto justify-center">
+        <div className="flex mx-2 lg:container lg:mx-auto justify-center">
           <div className="relative w-full md:w-2/4">
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white" />
             <input
@@ -29,7 +29,7 @@ const Brands = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-6 flex flex-col gap-6">
+      <div className="lg:container mx-3 lg:mx-auto mt-6 flex flex-col gap-6">
         {filteredBrands.length > 0 ? (
           filteredBrands.map((brand) => (
             <BrandCard brand={brand} key={brand._id}></BrandCard>
