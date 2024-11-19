@@ -34,7 +34,11 @@ const BrandsOnSale = ({ data: brands }) => {
             key={brand._id}
           >
             <div className="flex justify-center items-center">
-              <img className="mb-3 h-28 p-4" src={brand.brand_logo} alt="" />
+              <img
+                className="mb-3 object-contain h-28 p-4"
+                src={brand.brand_logo}
+                alt=""
+              />
             </div>
             <div className="border-t">
               <div className="flex justify-between mt-4">

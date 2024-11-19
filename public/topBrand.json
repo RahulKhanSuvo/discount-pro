@@ -15,7 +15,7 @@
     "logo": "https://i.ibb.co.com/z7vcy0x/Foodpanda-Logo-wine.png"
   },
   {
-    "id": "004",
+    "id": "010",
     "name": "Uber Eats",
     "logo": "https://i.ibb.co.com/jHhL5MB/Uber-Eats-Logo.png"
   },
@@ -45,19 +45,24 @@
     "logo": "https://i.ibb.co.com/n8JkQmK/Shopify-Logo.png"
   },
   {
-    "id": "010",
+    "id": "004",
     "name": "Walmart",
     "logo": "https://i.ibb.co.com/wyK3bkL/Walmart-Logo-wine.png"
   },
   {
-    "id": "012",
+    "id": "011",
     "name": "BestBuy",
     "logo": "https://i.ibb.co.com/4N23kxZ/download-2.png"
   },
   {
-    "id": "013",
+    "id": "012",
     "name": "Target",
     "logo": "https://i.ibb.co.com/0mds23w/target-logo-target-icon-transparent-free-png.webp"
+  },
+  {
+    "id": "013",
+    "name": "Lazada",
+    "logo": "https://i.ibb.co.com/pr1KJDb/images.jpg"
   }
 ]
  

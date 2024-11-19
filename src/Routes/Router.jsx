@@ -11,6 +11,7 @@ import ErrorPage from "../components/ErrorPage";
 import About from "../pages/About";
 import ProfileUpdate from "../pages/ProfileUpdate";
 import ForgetPassword from "../pages/ForgetPassword";
+import BrandDetails from "../Private/BrandDetails";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/brand/:id",
+        element: <BrandDetails></BrandDetails>,
+        loader: async ({ params }) => {
+          const res = await fetch("/coupons.json");
+          const data = await res.json();
+          const singleData = data.find((d) => d._id == params.id);
+          return singleData;
+        },
+      },
+      {
+        path: "/brands/:id",
         element: (
           <PrivateRoute>
             <CouponPage></CouponPage>

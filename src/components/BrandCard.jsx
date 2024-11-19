@@ -22,7 +22,7 @@ const BrandCard = ({ brand }) => {
     >
       <div className="border rounded-sm">
         <img
-          className="w-56 object-fill md:w-32 h-14 p-3 border-b "
+          className="w-56 object-contain md:w-32 h-14 p-3 border-b "
           src={brand_logo}
           alt={brand_name}
         />
@@ -47,15 +47,15 @@ const BrandCard = ({ brand }) => {
       </div>
 
       {/* Description Section */}
-      <div className="">
+      <div className="md:w-80">
         <h3 className="font-semibold pt-3 md:p-0">{brand_name}</h3>
-        <p className="text-sm text-gray-700">{description}</p>
+        <p className="text-sm text-gray-700">{description.slice(0, 100)}...</p>
       </div>
 
       {/* View Coupons Button */}
       <div className="flex flex-col items-center">
         <Link
-          to={`/brand/${_id}`}
+          to={`/brands/${_id}`}
           className="rounded-sm py-2 text-white  bg-[#FFA619] font-bold text-lg btn shadow-sm px-3"
         >
           View Coupons
