@@ -104,7 +104,7 @@ const Login = () => {
             </button>
           </div>
           <p className="text-center mt-2">
-            Don't have an account?{" "}
+            Do not have an account?{" "}
             <button
               onClick={handleRegisterBtn}
               className="text-[#8529CD] font-medium"
