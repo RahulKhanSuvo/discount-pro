@@ -21,35 +21,45 @@ const BrandsOnSale = ({ data: brands }) => {
   const saleBrands = brands.filter((brand) => brand.isSaleOn);
 
   return (
-    <section className="mt-4">
-      <h3 className="text-lg font-bold mb-4">Brands on Sale</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <section className="mt-8 ">
+      <h3 className="text-xl font-bold mb-6 text-gray-800">Brands on Sale</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {saleBrands.map((brand) => (
           <div
             data-aos="fade-up"
             style={{
-              boxShadow: "5px 5px 3px rgba(243, 243, 243, 1)",
+              boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
             }}
-            className="bg-white px-6 rounded-sm"
+            className="bg-white rounded-sm p-4 flex flex-col items-center hover:shadow-xl transition-shadow duration-300"
             key={brand._id}
           >
-            <div className="flex justify-center items-center">
+            {/* Logo Section */}
+            <div className="flex justify-center items-center mb-4">
               <img
-                className="mb-3 object-contain h-28 p-4"
+                className="h-24 w-24 object-contain"
                 src={brand.brand_logo}
-                alt=""
+                alt={`${brand.brand_name} Logo`}
               />
             </div>
-            <div className="border-t">
-              <div className="flex justify-between mt-4">
-                <h3 className="font-medium">{brand.brand_name}</h3>
-                <p className="bg-[#F3F4F6] px-2 rounded-badge">
+
+            {/* Brand Name & Category */}
+            <div className="w-full border-t pt-4 mt-4">
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {brand.brand_name}
+                </h3>
+                <p className="text-sm bg-gray-100 px-2 py-1 rounded-full text-gray-600">
                   {brand.category}
                 </p>
               </div>
             </div>
-            <p className="text-center mt-4 pb-4">
-              Total coupons: {brand.coupons.length}
+
+            {/* Coupon Information */}
+            <p className="text-center text-gray-600 mt-4">
+              <span className="font-medium text-gray-800">
+                {brand.coupons.length}
+              </span>{" "}
+              Total Coupons Available
             </p>
           </div>
         ))}

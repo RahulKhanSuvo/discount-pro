@@ -19,12 +19,14 @@ const Brands = () => {
 
   return (
     <section className="bg-[#F8F8F8] no-overflow pb-10">
+      {/* Header Section with Search */}
       <div className="bg-[#8529CD] py-4">
-        <h2 className="text-center text-2xl font-bold mb-4 text-white">
-          Find Your Favorite Brands
-        </h2>
-        <div className="flex mx-2 lg:container lg:mx-auto justify-center">
-          <div className="relative w-full md:w-2/4">
+        <div className="lg:container  lg:mx-auto flex mx-3 flex-wrap items-center justify-between gap-4">
+          {/* Heading */}
+          <h2 className="text-2xl font-bold text-white">All Brands</h2>
+
+          {/* Search Input */}
+          <div className="relative w-full md:w-2/4 lg:w-1/3">
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white" />
             <input
               type="text"
@@ -36,6 +38,8 @@ const Brands = () => {
           </div>
         </div>
       </div>
+
+      {/* Brands List */}
       <div className="lg:container mx-3 lg:mx-auto mt-6 flex flex-col gap-6">
         {filteredBrands.length > 0 ? (
           filteredBrands.map((brand, index) => (
@@ -50,7 +54,9 @@ const Brands = () => {
             </div>
           ))
         ) : (
-          <p className="text-center text-white">No brands found.</p>
+          <p className="text-center text-[#8529CD] text-lg mt-6">
+            No brands found. Try adjusting your search!
+          </p>
         )}
       </div>
     </section>
