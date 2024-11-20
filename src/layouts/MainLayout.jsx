@@ -15,7 +15,7 @@ const MainLayout = () => {
       {user && (
         <div className="flex justify-center bg-[#8529CD] items-center">
           <h2 className="md:text-2xl text-white font-semibold text-center">
-            Welcome back, {user.displayName || user.email}!
+            Welcome back, {user?.displayName || user?.email}!
           </h2>
         </div>
       )}

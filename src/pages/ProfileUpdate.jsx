@@ -18,39 +18,43 @@ const ProfileUpdate = () => {
   };
 
   return (
-    <div className=" flex min-h-[calc(100vh-197px)] items-center justify-center  ">
-      <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-        <form onSubmit={handelSubmit} className="card-body">
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Name</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Photo-URL</span>
-            </label>
-            <input
-              type="text"
-              placeholder="URL"
-              name="photo"
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control mt-6">
-            <button className="btn btn-primary">Update Info</button>
-          </div>
-        </form>
+    <section className="bg-[#F8F8F8]">
+      <div className=" flex min-h-[calc(100vh-197px)] items-center justify-center  ">
+        <div className="card rounded-sm bg-base-100 w-full max-w-sm shrink-0 shadow-sm">
+          <form onSubmit={handelSubmit} className="card-body">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Name</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                className="input rounded-sm input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Photo-URL</span>
+              </label>
+              <input
+                type="text"
+                placeholder="URL"
+                name="photo"
+                className="input rounded-sm input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control mt-6">
+              <button className="btn bg-[#FFA619] text-white btn-primary border-none rounded-sm">
+                Update Info
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

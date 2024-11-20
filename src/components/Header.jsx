@@ -76,11 +76,11 @@ const Header = () => {
           {user ? (
             <div className="flex items-center gap-3">
               <img
-                src={user.photoURL}
+                src={user?.photoURL}
                 alt="User Profile"
                 className="w-8 h-8 rounded-full"
               />
-              <span className="text-sm">{user.email}</span>
+              <span className="text-sm">{user?.email}</span>
               <button
                 onClick={userLogout}
                 className="text-lg font-semibold text-white px-5 py-2 rounded-full bg-[#8529CD] hover:underline"
@@ -118,11 +118,11 @@ const Header = () => {
                 {user ? (
                   <div className="flex items-center flex-col gap-3">
                     <img
-                      src={user.photoURL}
+                      src={user?.photoURL}
                       alt="User Profile"
                       className="w-8 h-8 rounded-full"
                     />
-                    <span className="text-sm">{user.displayName}</span>
+                    <span className="text-sm">{user?.displayName}</span>
                     <button
                       onClick={userLogout}
                       className="text-sm px-2 font-semibold text-white rounded-full bg-[#8529CD] hover:underline"
