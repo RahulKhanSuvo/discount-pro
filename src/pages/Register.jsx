@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../context/authContext";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -10,7 +10,6 @@ const Register = () => {
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -43,7 +42,7 @@ const Register = () => {
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
             setLoading(false);
-            navigate(location.state ? location.state : "/");
+            navigate("/");
           })
           .catch(() => {
             setError("Failed to update user profile.");
@@ -56,7 +55,7 @@ const Register = () => {
   const handleGoogleSign = () => {
     userGoogleSignIn()
       .then(() => {
-        navigate(location.state ? location.state : "/");
+        navigate("/");
       })
       .catch(() => {
         setError("Google sign-in failed.");

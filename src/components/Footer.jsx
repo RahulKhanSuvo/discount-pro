@@ -13,7 +13,7 @@ const Footer = () => {
         {/* Social Media Icons */}
         <div className="flex gap-6 mb-4 md:mb-0">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/cdrdeadpool/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition"
@@ -21,7 +21,7 @@ const Footer = () => {
             <FaFacebook size={24} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com/RahulKhanSuvo"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition"
@@ -29,7 +29,7 @@ const Footer = () => {
             <FaTwitter size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/rahulkhansuvo/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition"
@@ -37,7 +37,7 @@ const Footer = () => {
             <FaLinkedin size={24} />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/RahulKhanSuvo"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-300 transition"
@@ -52,7 +52,7 @@ const Footer = () => {
             to="https://github.com/RahulKhanSuvo"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-300 transition text-sm"
+            className="text-sm text-white underline hover:text-blue-500 hover:underline transition duration-300"
           >
             Developed by Rahul
           </Link>

@@ -3,7 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../context/authContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
+import { toast } from "react-toastify";
 const Login = () => {
   const { userLogin, userGoogleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -22,6 +22,7 @@ const Login = () => {
       })
       .catch(() => {
         setError("Invalid email or password.");
+        toast.error("Invalid email or password.");
       });
   };
 

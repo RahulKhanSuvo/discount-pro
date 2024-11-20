@@ -1,5 +1,4 @@
 import { useLoaderData } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import ReactStars from "react-rating-stars-component";
 import Coupon from "../components/Coupon";
 const CouponPage = () => {
@@ -7,7 +6,6 @@ const CouponPage = () => {
   const {
     brand_name,
     rating,
-    description,
     brand_logo,
     shop_Link,
     coupons,
@@ -50,21 +48,19 @@ const CouponPage = () => {
             style={{
               boxShadow: "5px 5px 3px rgba(243, 243, 243, 1)",
             }}
-            className="bg-white border-dashed border-t p-5 "
-          >
-            <p className="text-gray-500">{description}</p>
-          </div>
+            className="bg-white border-dashed border-t "
+          ></div>
           <div>
-            <div className="">
+            <div className=" ">
               {isSaleOn ? (
                 <div
                   style={{
                     boxShadow: "5px 5px 3px rgba(243, 243, 243, 1)",
                   }}
-                  className="p-4 bg-green-100 text-green-800 rounded-sm flex items-center gap-3"
+                  className="p-4 text-center bg-green-100 text-green-800 rounded-sm flex justify-center items-center gap-3"
                 >
                   <span className="text-2xl">🔥</span>
-                  <p className="text-xl font-semibold">
+                  <p className="text-xl font-semibold text-center">
                     Hurry! There's a Sale Going On!
                   </p>
                 </div>
@@ -90,7 +86,6 @@ const CouponPage = () => {
             ))}
           </div>
         </div>
-        <ToastContainer></ToastContainer>
       </div>
     </section>
   );
