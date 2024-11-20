@@ -33,36 +33,33 @@ const Register = () => {
       return;
     }
     if (!hasLowercase) {
-      setError("Password must contain at least one lowercase letter.");
       toast.error("Password must contain at least one lowercase letter.");
+      setError("Password must contain at least one lowercase letter.");
       return;
     }
 
     userRegister(email, password)
       .then(() => {
-        toast.success("Registration successful!");
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
             setLoading(false);
             navigate(location.state ? location.state : "/");
           })
           .catch(() => {
-            toast.error("Failed to update user profile.");
+            setError("Failed to update user profile.");
           });
       })
       .catch((error) => {
         setError(error.message);
-        toast.error("Registration failed. Please try again.");
       });
   };
   const handleGoogleSign = () => {
     userGoogleSignIn()
       .then(() => {
-        toast.success("Logged in with Google!");
         navigate(location.state ? location.state : "/");
       })
       .catch(() => {
-        toast.error("Google sign-in failed.");
+        setError("Google sign-in failed.");
       });
   };
 
